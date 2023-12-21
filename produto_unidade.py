@@ -6,9 +6,11 @@ Script que transforma várias planilhas de
 
 import os
 import pandas as pd
+from dotenv import dotenv_values
 
+ENV = dotenv_values('.env')
 CWD = os.getcwd()
-INPUTS = os.path.join(CWD, 'inputs')
+INPUTS = os.path.join(ENV['INPUT_FOLDER'])
 OUTPUTS = os.path.join(CWD, 'outputs')
 NEW_COLUMNS = [
     'exercicio',
@@ -61,8 +63,10 @@ dfs = list()
 for sheet in sheets:
     df_ = pd.read_excel(
         f'{INPUTS}/Produto_Unidade - NOVO.xlsx',
-        sheet_name=sheet
+        sheet_name=sheet,
+        # nrows=1000
         )
+    df_.columns = NEW_COLUMNS
     df_['planilha'] = sheet
     dfs.append(df_)
 
@@ -71,7 +75,7 @@ df = pd.\
         to_csv(
             f'{OUTPUTS}/produto_unidade.csv', 
             index=False,
-            header=False,
+            sep=';',
             encoding='utf-8'
         )
     
