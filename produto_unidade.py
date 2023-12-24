@@ -9,9 +9,8 @@ import pandas as pd
 from dotenv import dotenv_values
 
 ENV = dotenv_values('.env')
-CWD = os.getcwd()
-INPUTS = os.path.join(ENV['INPUT_FOLDER'])
-OUTPUTS = os.path.join(CWD, 'outputs')
+INPUTS = os.path.join(ENV['INPUT_FOLDER'], 'Produto_Unidade - NOVO.xlsx')
+OUTPUTS = os.path.join(ENV['OUTPUT_FOLDER'], 'produto_unidade.csv')
 NEW_COLUMNS = [
     'exercicio',
 	'oe_codigo',
@@ -55,6 +54,23 @@ NEW_COLUMNS = [
 	'conservacao_patrimonial',
 	'cod_ibge_mun'
 ]
+DELETE_COLS = [
+    'subfuncao_codigo',
+	'subfuncao_nome',
+	'meta_1o_ano',
+	'meta_2o_ano',
+	'meta_3o_ano',
+	'meta_4o_ano',
+	'programa_tipo_alteracao',
+	'programa_justificativa_alteracao',
+	'acao_tipo_alteracao',
+	'acao_justificativa_alteracao',
+	'subacao_tipo_alteracao',
+	'subacao_justificativa_alteracao',
+	'produto_nome',
+	'unidade_nome',
+	'tipo_localizacao'
+]
 
 # produto unidade
 sheets = ['Ant', 'Atual', 'Fut', '2008-2014']
@@ -62,7 +78,7 @@ sheets = ['Ant', 'Atual', 'Fut', '2008-2014']
 dfs = list()
 for sheet in sheets:
     df_ = pd.read_excel(
-        f'{INPUTS}/Produto_Unidade - NOVO.xlsx',
+        INPUTS,
         sheet_name=sheet,
         # nrows=1000
         )
@@ -70,12 +86,15 @@ for sheet in sheets:
     df_['planilha'] = sheet
     dfs.append(df_)
 
-df = pd.\
-        concat(dfs).\
-        to_csv(
-            f'{OUTPUTS}/produto_unidade.csv', 
-            index=False,
-            sep=';',
-            encoding='utf-8'
-        )
+pd.\
+	concat(dfs).\
+	query('exercicio > 2010').\
+	drop(DELETE_COLS, axis=1).\
+    drop_duplicates().\
+	to_csv(
+		f'{OUTPUTS}/produto_unidade.csv', 
+		index=False,
+		sep=';',
+		encoding='utf-8'
+	)
     
