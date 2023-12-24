@@ -5,10 +5,19 @@ Script que transforma várias planilhas de
 """
 
 import os
+import logging
 import pandas as pd
 from dotenv import dotenv_values
 
+
 ENV = dotenv_values('.env')
+
+logging.basicConfig(
+    filename=os.path.join(ENV['LOG_FOLDER'], 'app_seges.txt'), 
+    level=logging.INFO, 
+    format='%(asctime)s:%(levelname)s:%(message)s'
+)
+
 INPUTS = os.path.join(ENV['INPUT_FOLDER'], 'Produto_Unidade - NOVO.xlsx')
 OUTPUTS = os.path.join(ENV['OUTPUT_FOLDER'], 'produto_unidade.csv')
 NEW_COLUMNS = [
@@ -72,6 +81,8 @@ DELETE_COLS = [
 	'tipo_localizacao'
 ]
 
+logging.info('----Transformando arquivo Produto_Unidade_xslx .')
+
 # produto unidade
 sheets = ['Ant', 'Atual', 'Fut', '2008-2014']
 
@@ -92,9 +103,10 @@ pd.\
 	drop(DELETE_COLS, axis=1).\
     drop_duplicates().\
 	to_csv(
-		f'{OUTPUTS}/produto_unidade.csv', 
+		OUTPUTS, 
 		index=False,
 		sep=';',
 		encoding='utf-8'
 	)
-    
+
+logging.info(f"Arquivo produto_unidade.csv em {ENV['OUTPUT_FOLDER']}")
