@@ -18,8 +18,14 @@ logging.basicConfig(
     format='%(asctime)s:%(levelname)s:%(message)s'
 )
 
-INPUTS = os.path.join(ENV['INPUT_FOLDER'], 'Produto_Unidade - NOVO.xlsx')
-OUTPUTS = os.path.join(ENV['OUTPUT_FOLDER'], 'produto_unidade.csv')
+INPUTS = os.path.join(
+    ENV['INPUT_FOLDER_PROD_UNIDADE'], 
+    'Produto_Unidade - NOVO.xlsx'
+)
+OUTPUTS = os.path.join(
+    ENV['OUTPUT_FOLDER_PROD_UNIDADE'], 
+    'produto_unidade.csv'
+)
 NEW_COLUMNS = [
     'exercicio',
 	'oe_codigo',
@@ -109,4 +115,6 @@ pd.\
 		encoding='utf-8'
 	)
 
-logging.info(f"Arquivo produto_unidade.csv em {ENV['OUTPUT_FOLDER']}")
+logging.info(
+    f"Arquivo produto_unidade.csv em {ENV['OUTPUT_FOLDER_PROD_UNIDADE']}"
+)
