@@ -10,7 +10,7 @@ import pandas as pd
 from dotenv import dotenv_values
 
 
-ENV = dotenv_values('.env')
+ENV = dotenv_values(os.path.join(os.getcwd(), '.env'))
 
 logging.basicConfig(
     filename=os.path.join(ENV['LOG_FOLDER'], 'app_seges.txt'), 
