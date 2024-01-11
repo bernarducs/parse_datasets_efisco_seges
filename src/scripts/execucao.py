@@ -5,17 +5,12 @@ Script que transforma várias planilhas de
 """
 import os
 import pandas as pd
+from constants import PROJECT_DIR
 
-def execucao(ENV):
-
-    INPUTS = os.path.join(
-        ENV['INPUT_FOLDER_EXECUCAO'], 
-        'Execucao_Painel_QVW_BIINtegrado.csv'
-    )
-    OUTPUTS = os.path.join(
-        ENV['OUTPUT_FOLDER_EXECUCAO'], 
-        'execucao.csv'
-    )
+def execucao(input_folder):
+    
+    INPUTS = os.path.join(input_folder, 'Execucao_Painel_QVW_BIINtegrado.csv')
+    OUTPUTS = os.path.join(PROJECT_DIR, 'datasets/outputs/execucao.csv')
     COLS = [
         'ANO',
         'MÊS',
@@ -74,10 +69,15 @@ def execucao(ENV):
 
     df = pd.\
             read_csv(INPUTS, sep=';', decimal=',', usecols=COLS).\
-            query('CGD == ["4+5", "3-ODC"]')
+            query('CGD == ["4+5", "3-ODC"]').\
+            groupby(GRPBY_COLS, as_index=False)[COLS[-5:]].sum()
 
-    df.columns = NEW_COLS
-    df.to_csv(
+    df.\
+    rename(
+        {old: new for old, new in zip(df.columns, NEW_COLS)},
+        axis='columns'
+    ).\
+    to_csv(
         OUTPUTS,
         sep=';',
         index=False,

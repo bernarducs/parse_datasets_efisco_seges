@@ -1,0 +1,59 @@
+2023-12-24 17:19:29,048:INFO:----Transformando arquivo Produto_Unidade_xslx .
+2023-12-24 17:25:49,158:INFO:----Transformando arquivo Produto_Unidade_xslx .
+2023-12-24 17:27:23,786:INFO:Arquivo produto_unidade.csv em outputs
+2023-12-24 18:33:25,429:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-24 18:33:27,625:INFO:Arquivo execucao.csv em outputs
+2023-12-24 18:43:35,087:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-24 18:43:37,528:INFO:Arquivo execucao.csv em outputs
+2023-12-24 19:04:09,800:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-24 19:06:22,188:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-24 19:11:19,591:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-24 19:13:39,492:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-24 19:14:07,861:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-24 19:14:15,698:INFO:Arquivo execucao.csv em outputs
+2023-12-24 19:27:09,853:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-24 19:27:19,024:INFO:Arquivo execucao.csv em outputs
+2023-12-24 19:32:41,705:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-24 19:35:26,488:INFO:Arquivo execucao.csv em outputs
+2023-12-27 10:16:23,400:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-27 10:16:27,891:INFO:Arquivo execucao.csv em outputs
+2023-12-27 10:16:27,891:INFO:----Transformando arquivo Produto_Unidade_xslx .
+2023-12-27 10:16:32,023:INFO:Arquivo execucao.csv em outputs
+2023-12-27 10:27:46,001:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-27 10:27:50,305:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2023-12-27 10:27:50,306:INFO:----Transformando arquivo Produto_Unidade_xslx .
+2023-12-27 10:27:54,457:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2023-12-27 10:31:30,468:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-27 10:31:34,672:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2023-12-27 10:31:34,672:INFO:----Transformando arquivo Produto_Unidade_xslx .
+2023-12-27 10:32:17,448:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2023-12-27 10:40:18,642:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-27 10:40:22,849:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2023-12-27 10:40:22,849:INFO:----Transformando arquivo Produto_Unidade_xslx .
+2023-12-27 10:41:04,402:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2023-12-27 10:53:39,219:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-27 10:53:40,578:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2023-12-27 10:53:40,578:INFO:----Transformando arquivo Produto_Unidade_xslx .
+2023-12-27 10:57:04,951:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-27 10:57:06,397:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2023-12-27 10:57:06,397:INFO:----Transformando arquivo Produto_Unidade_xslx .
+2023-12-27 10:57:47,115:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2023-12-27 14:53:40,935:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-27 14:53:42,831:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2023-12-27 14:53:42,831:INFO:----Transformando arquivo Produto_Unidade_xslx .
+2023-12-27 14:54:25,403:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2023-12-27 15:09:58,447:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2023-12-27 15:10:34,919:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2023-12-27 15:10:34,920:INFO:----Transformando arquivo Produto_Unidade_xslx .
+2023-12-27 15:11:19,035:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2024-01-07 19:00:08,481:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2024-01-07 19:00:11,081:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2024-01-07 19:00:11,081:INFO:----Transformando arquivo Produto_Unidade_xslx .
+2024-01-07 19:01:47,700:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2024-01-07 19:14:51,695:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2024-01-07 19:14:54,634:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2024-01-07 19:14:54,635:INFO:----Transformando arquivo Produto_Unidade_xslx .
+2024-01-07 19:16:20,194:INFO:Arquivo execucao.csv em /home/berna/py-projs/parse_datasets_efisco_seges/outputs
+2024-01-07 20:12:16,270:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2024-01-07 20:18:40,430:INFO:----Transformando arquivo Execucao_Painel_QVW_BIINtegrado.
+2024-01-07 20:18:41,834:INFO:----Transformando arquivo Produto_Unidade_xslx .

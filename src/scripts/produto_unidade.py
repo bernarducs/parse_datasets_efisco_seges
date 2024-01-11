@@ -6,18 +6,13 @@ Script que transforma várias planilhas de
 
 import os
 import pandas as pd
+from constants import PROJECT_DIR
 
 
-def produto_unidade(ENV):
+def produto_unidade(input_folder):
 
-	INPUTS = os.path.join(
-		ENV['INPUT_FOLDER_PROD_UNIDADE'], 
-		'Produto_Unidade - NOVO.xlsx'
-	)
-	OUTPUTS = os.path.join(
-		ENV['OUTPUT_FOLDER_PROD_UNIDADE'], 
-		'produto_unidade.csv'
-	)
+	INPUTS = os.path.join(input_folder, 'Produto_Unidade - NOVO.xlsx')
+	OUTPUTS = os.path.join(PROJECT_DIR, 'datasets/outputs/produto_unidade.csv')
 	NEW_COLUMNS = [
 		'exercicio',
 		'oe_codigo',
