@@ -1,10 +1,15 @@
 import os
 import fire
 from constants import PROJECT_DIR
-from logging_config import logger
+from logging_config import create_logger
 from scripts import execucao, produto_unidade
 
-def main(input_folder=None):
+def main(input_folder=None, log_file=None):
+    if log_file is None:
+        log_file = os.path.join(PROJECT_DIR, 'logs/app_seges.txt')    
+    
+    logger = create_logger(log_file)
+
     if input_folder is None:
         input_folder = os.path.join(PROJECT_DIR, 'datasets/inputs')
 

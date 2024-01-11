@@ -1,14 +1,15 @@
 import os
 import logging
-from constants import PROJECT_DIR
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+def create_logger(log_file_path):
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.INFO)
 
-file_handler = logging.FileHandler(
-    os.path.join(PROJECT_DIR, 'logs/app_seges.txt')
-)
-file_handler.setFormatter(
-    logging.Formatter('%(asctime)s:%(levelname)s:%(message)s')
+    file_handler = logging.FileHandler(
+        log_file_path
     )
-logger.addHandler(file_handler)
+    file_handler.setFormatter(
+        logging.Formatter('%(asctime)s:%(levelname)s:%(message)s')
+        )
+    logger.addHandler(file_handler)
+    return logger
